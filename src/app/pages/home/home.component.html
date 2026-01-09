@@ -1,0 +1,36 @@
+<div class="home">
+  <header class="home__header">
+    <h1 class="home__title">Running Tracker</h1>
+
+    <div class="home__stats">
+      <div class="home__stat">
+        <span class="home__stat-value">{{ totalSessions() }}</span>
+        <span class="home__stat-label">Total Sessions</span>
+      </div>
+      <div class="home__stat">
+        <span class="home__stat-value">{{ totalDistance().toFixed(1) }} km</span>
+        <span class="home__stat-label">Total Distance</span>
+      </div>
+    </div>
+  </header>
+
+  @if (sortedSessions().length === 0) {
+    <div class="home__empty">
+      <p class="home__empty-text">No running sessions yet.</p>
+      <p class="home__empty-subtext">Start tracking your runs!</p>
+    </div>
+  } @else {
+    <div class="home__sessions">
+      @for (session of sortedSessions(); track session.id) {
+        <app-session-card
+          [session]="session"
+          (deleteClicked)="onDeleteSession($event)"
+        />
+      }
+    </div>
+  }
+
+  <button class="home__add-button" (click)="onAddSession()" type="button">
+    + Add Session
+  </button>
+</div>

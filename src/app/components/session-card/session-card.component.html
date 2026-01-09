@@ -1,0 +1,25 @@
+<div class="session-card">
+  <div class="session-card__header">
+    <span class="session-card__date">{{ formatDate(session().date) }}</span>
+    <button class="session-card__delete" (click)="onDeleteClick()" type="button">
+      &times;
+    </button>
+  </div>
+
+  <div class="session-card__body">
+    <div class="session-card__stat">
+      <span class="session-card__label">Distance</span>
+      <span class="session-card__value">{{ session().distance }} km</span>
+    </div>
+
+    <div class="session-card__stat">
+      <span class="session-card__label">Time</span>
+      <span class="session-card__value">{{ formatTime(session().minutes, session().seconds) }}</span>
+    </div>
+
+    <div class="session-card__stat">
+      <span class="session-card__label">Feeling</span>
+      <span class="session-card__value session-card__value--feeling">{{ session().feeling }}</span>
+    </div>
+  </div>
+</div>
