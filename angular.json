@@ -70,7 +70,30 @@
           "defaultConfiguration": "development"
         },
         "test": {
-          "builder": "@angular/build:unit-test"
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "coverageInclude": [
+              "src/app/**/*.ts",
+              "src/app/**/*.component.ts",
+              "src/app/**/*.service.ts",
+              "src/app/**/*.pipe.ts",
+              "src/app/**/*.directive.ts",
+              "src/app/**/*.guard.ts",
+              "src/app/**/*.interceptor.ts"
+            ],
+            "coverageExclude": [
+              "**/*.spec.ts",
+              "**/*.config.ts",
+              "**/*.routes.ts"
+            ],
+            "coverageReporters": ["html", "lcov", "text"],
+            "coverageThresholds": {
+              "statements": 80,
+              "branches": 80,
+              "functions": 80,
+              "lines": 80
+            }
+          }
         }
       }
     }
