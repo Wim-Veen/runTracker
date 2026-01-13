@@ -1,7 +1,7 @@
 import { Component, inject, computed } from '@angular/core';
 import { Router } from '@angular/router';
-import { RunningSessionService } from '../../services/running-session.service';
-import { SessionCardComponent } from '../../components/session-card/session-card.component';
+import { RunningSessionService } from '../services/running-session.service';
+import { SessionCardComponent } from '../add-session/session-card/session-card.component';
 
 @Component({
   selector: 'app-home',

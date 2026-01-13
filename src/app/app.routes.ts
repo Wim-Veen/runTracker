@@ -8,11 +8,11 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
+    loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
   },
   {
     path: 'add-session',
-    loadComponent: () => import('./pages/add-session/add-session.component').then(m => m.AddSessionComponent)
+    loadComponent: () => import('./add-session/add-session.component').then(m => m.AddSessionComponent)
   },
   {
     path: '**',

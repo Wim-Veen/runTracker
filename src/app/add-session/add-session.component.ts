@@ -1,7 +1,7 @@
 import { Component, inject, computed, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
-import { RunningSessionService } from '../../services/running-session.service';
+import { RunningSessionService } from '../services/running-session.service';
 
 @Component({
   selector: 'app-add-session',

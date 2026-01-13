@@ -1,59 +1,128 @@
 # RunTracker
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
+> **Moeilijkheidsgraad:** 2/5  
+> **Focus:** Unit testing middels AI agents
 
-## Development server
+## 🎯 Wat is het Idee?
 
-To start a local development server, run:
+De repository bevat een simpele fitness tracker waarbij de gebruiker zijn statistieken kan bijhouden. In dit Angular project zijn Vitest en code coverage tooling al toegevoegd. De bedoeling is om de applicatie 100% ge-unit test te krijgen met behulp van AI.
 
-```bash
-ng serve
-```
+## 🤔 Waarom Dit Project?
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Dit project geeft de gebruiker inzicht, hoe makkelijk en efficient het gebruik van AI is voor het aftesten van functionaliteit. Gebruikers moeten zelf nog wel opletten dat het juiste getest wordt, maar veel implementatie details zijn met Gen-AI op te lossen.
 
-## Code scaffolding
+- Je leert na te denken over je code, of het opgesplits kan worden en verschillende technieken zoals Mocking, Stubs etc.
+- Je leert dieper na te denken welke functionaliteiten je hebt en hoe je deze kan aftesten
+- Het geeft inzicht hoe je tijd kan besparen door testen met Gen-AI op te pakken en/of hoe je jezelf kunt "unstucken" als je vast loopt.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📋 Wat Houdt Dit In?
 
-```bash
-ng generate component component-name
-```
+De opdracht bevat een volledig werkende applicatie waarbij een gebruiker zijn hardloop data kan tracken. er zijn 2 schermen:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+1. Het home scherm waar de gebruiker reeds getrackte data ziet en kan verwijderen.
+2. Het scherm waar de gebruiker een nieuwe hardloopsessie kan genereren.
 
-```bash
-ng generate --help
-```
+**Eindresultaat**:
+De applicatie is 100% code coverage afgetest met Vitest.
 
-## Building
+**Hoofdtaken**:
+Zorg dat in ieder geval het toevoegen/verwijderen van een hardloopsessie en het overzicht afgetest wordt. De applicatie maakt gebruik van local storage zodat er geen complexe database setup nodig is.
 
-To build the project run:
+## 🚀 Aan de Slag
 
-```bash
-ng build
-```
+### Technische Setup
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+**Vereisten:**
 
-## Running unit tests
+- Cursor
+- NPM
+- Angular CLI (v21)
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+**Installatie:**
 
 ```bash
-ng e2e
+# Clone de repository
+git clone https://github.com/rwormsbecher/runTracker.git
+
+# Installeer de laatste versie van Angular CLI globaal
+npm install -g @angular/cli
+
+# Installeer dependencies
+npm install
+
+# Start de development server
+npm start
+
+# Run Vitest unit testen
+npm test
+
+# run Vitest unit testen met coverage
+npm run test:coverage
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+**Suggesties om te starten:**
 
-## Additional Resources
+1. Test de applicatie uit. Voeg wat data toe en verwijder deze. Kijk ook in de local storage om te zien welke data er bijgehouden wordt.
+2. Bekijk de code, Componenten, services etc.
+3. Run `npm run test:coverage`
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📦 Wat Zit er in Deze Repo?
+
+**Project structuur:**
+
+```
+/src
+    /app
+        /[add-session]/*
+        /[home]/*
+        /[models]/*
+        /[services]/*
+        /app.config.ts
+        /app.routes.ts
+        /app/scss
+        /app.html
+        /app.spec.ts
+        /app.ts
+    /index.html
+    /main.ts
+    .styles.scss
+/[...configFiles]
+
+```
+
+**Beschikbare tooling:**
+
+- Vitest, Angular CLI
+- Standaard Angular Setup
+
+**Pre-configured features:**
+
+- Test coverage voor Vite
+- Compopnenten:
+  - home.component.ts
+  - add-session.component.ts
+- Services:
+  - running-session.service.ts
+
+**Handige commando's:**
+
+```bash
+npm run start           # Start development server
+npm run test            # Run tests
+npm run test:coverage   # Check coverage
+npm run build           # Build voor productie
+```
+
+## 🎯 Doel van het Project
+
+Het doel is voor de al geschreven code 100% coverage te bereiken.
+
+- Bereik 100% test coverage.
+- Exposure met Vitest.
+- Plezier tijdens het testen.
+
+## 📚 Resources
+
+- De Git repository is heir te vinden:: https://github.com/rwormsbecher/runTracker
+
+**Vragen?** Neem contact op met Rodney Wormsbecher of de andere organisatoren.
